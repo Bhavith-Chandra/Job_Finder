@@ -1,0 +1,79 @@
+Job Finder
+Description
+Job Finder is a Python script that allows you to search for jobs easily. You just need to input the type of job you are searching for and mention the skills you are not familiar with. The script then creates a directory containing all the details of the companies related to your preferences. The information is scraped from the website Indeed.com.
+
+Installation
+Clone the project
+
+bash
+Copy code
+git clone git@github.com:archihalder/job-finder.git
+Enter the directory
+
+bash
+Copy code
+cd job-finder
+Create and activate a virtual environment
+
+bash
+Copy code
+python -m venv env
+source env/bin/activate  # for Mac/Linux
+env\Scripts\activate.bat  # for Windows
+Install the required modules
+
+bash
+Copy code
+pip install -r requirements.txt
+Usage
+Run the script
+
+python
+Copy code
+python finder.py
+Input the type of job you are searching for
+
+sql
+Copy code
+What kind of job are you looking for? Software Engineer
+Input any skills you are not familiar with
+
+Copy code
+Enter any skills you don't have (comma-separated): Java, MySQL
+
+markdown
+Copy code
+
+4. Wait for the script to scrape the data and create the `posts` directory
+
+Scraping https://www.indeed.com/jobs?q=Software+Engineer&l=United+States&start=0...
+Scraping https://www.indeed.com/jobs?q=Software+Engineer&l=United+States&start=10...
+Scraping https://www.indeed.com/jobs?q=Software+Engineer&l=United+States&start=20...
+...
+Done! Check the posts directory for the results.
+
+markdown
+Copy code
+
+5. Check the `posts` directory for the results
+
+posts/
+├── company1.md
+├── company2.md
+├── company3.md
+...
+
+sql
+Copy code
+
+Each file contains the details of a company that matches your search criteria.
+
+## Future improvements
+
+- [ ] Implement a command-line interface with `argparse`
+- [ ] Search for jobs in multiple pages
+- [ ] Automate the process even further by running the script periodically with `cron` or `Task Scheduler`
+Save
+
+
+
